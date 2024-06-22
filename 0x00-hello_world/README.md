@@ -1,4 +1,4 @@
-This directory has some shell scripts and is for some basics of C programming like the compliation process.
+### This directory has some shell scripts and is for some basics of C programming like the compliation process.
 
 #### 0-preprocessor: runs a C file through the preprocessor and save the result into another file:   
 
