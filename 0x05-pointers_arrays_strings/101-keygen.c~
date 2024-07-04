@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+/**
+ * main - Generates a random valid password for the 101-crackme program.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int i, sum;
+    char password[12];
+
+    sum = 0;
+
+    srand(time(0));
+
+    for (i = 0; i < 11; i++)
+    {
+        password[i] = (rand() % 26) + 'A'; // Generate random uppercase letters
+        sum += password[i];
+    }
+
+    password[11] = '\0';
+
+    // Ensure the generated password meets the required sum for validation (example)
+    while (sum != 2772)
+    {
+        for (i = 0; i < 11; i++)
+        {
+            sum -= password[i];
+            password[i] = (rand() % 26) + 'A';
+            sum += password[i];
+        }
+    }
+
+    printf("%s\n", password);
+
+    return (0);
+}
