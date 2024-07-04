@@ -10,15 +10,15 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-    char *start = dest;
+	char *start = dest;
 
-    while (*src)
-    {
-        *dest = *src;
-        dest++;
-        src++;
-    }
-    *dest = '\0';  /* Add the null terminator */
+	while (*src)
+	{
+		*dest = *src;
+		dest++;
+		src++;
+	}
+	*dest = '\0';  /* Add the null terminator */
 
-    return start;
+	return (start);
 }
