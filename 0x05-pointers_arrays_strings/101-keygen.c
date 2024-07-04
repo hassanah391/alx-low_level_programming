@@ -14,14 +14,14 @@ int main(void)
 
     srand(time(NULL));
 
-    // Generate random characters for the password
+    /* Generate random characters for the password */
     for (i = 0; i < 11; i++)
     {
-        password[i] = rand() % 94 + 33; // ASCII printable characters range
+        password[i] = rand() % 94 + 33; /* ASCII printable characters range */
     }
     password[11] = '\0';
 
-    // Calculate the expected checksum
+    /* Calculate the expected checksum */
     sum = 0;
     for (i = 0; i < 11; i++)
     {
@@ -29,7 +29,7 @@ int main(void)
     }
     sum %= 63;
 
-    // Adjust the last character to make the sum match 62
+    /* Adjust the last character to make the sum match 62 */
     diff = 62 - sum;
     password[10] += diff;
 
