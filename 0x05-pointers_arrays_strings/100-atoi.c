@@ -25,6 +25,14 @@ int _atoi(char *s)
 		else if (*s >= '0' && *s <= '9')
 		{
 			found_num = 1;
+			if (sign == 1 && result > (2147483647 - (*s - '0')) / 10)
+			{
+				return (2147483647);  /* Return INT_MAX on overflow */
+			}
+			else if (sign == -1 && result > (2147483648U - (*s - '0')) / 10)
+			{
+				return (-2147483648); /* Return INT_MIN on overflow */
+			}
 			result = result * 10 + (*s - '0');
 		}
 		else if (found_num)
