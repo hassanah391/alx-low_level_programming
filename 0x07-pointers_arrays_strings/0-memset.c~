@@ -1,0 +1,16 @@
+#include "main.h"
+
+char *_memset(char *s, char b, unsigned int n)
+{
+	int i;
+	char *ptr = s;
+	int intn = n;
+	
+	for (i = 0; i < intn; i++)
+	{
+		*ptr = b;
+		ptr++;
+	}
+
+	return (s);
+}
