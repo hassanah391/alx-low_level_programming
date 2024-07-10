@@ -29,5 +29,5 @@ void print_reverse_string_with_newline(char *s)
 
 	_print_rev_recursion(s);
 
-	putchar('\n');
+	_putchar('\n');
 }
