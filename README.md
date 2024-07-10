@@ -13,4 +13,3 @@
 - OS: Ubuntu 20.04 LTS   
 - Compiler: gcc   
 - Style guidelines: [Betty style](https://github.com/alx-tools/Betty/wiki "Betty style rules")
-
