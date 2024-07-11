@@ -1,0 +1,36 @@
+#include "main.h"
+
+/**
+ * is_prime_helper - Helper function to perform the recursive check
+ * @n: The number to be checked
+ * @i: The current divisor being checked
+ *
+ * Return: 1 if n is prime, 0 otherwise
+ */
+int is_prime_helper(int n, int i)
+{
+	if (i * i > n)
+	{
+		return (1);  /* n is prime */
+	}
+	if (n % i == 0)
+	{
+		return (0);  /* n is not prime */
+	}
+	return (is_prime_helper(n, i + 1));  /* Check next divisor */
+}
+
+/**
+ * is_prime_number - Main function to check if a number is prime
+ * @n: The number to be checked
+ *
+ * Return: 1 if n is prime, 0 otherwise
+ */
+int is_prime_number(int n)
+{
+	if (n <= 1)
+	{
+		return (0);  /* n is not prime */
+	}
+	return (is_prime_helper(n, 2));  /* Start checking from divisor 2 */
+}
