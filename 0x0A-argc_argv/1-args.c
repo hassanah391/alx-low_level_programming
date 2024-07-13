@@ -5,7 +5,7 @@
  * @argc: count of arguments
  * @argv: an array of the arguments
  *
- * description: prints the file name
+ * description: prints the number of arguments (argc)
  *
  * Return: returns 0 (success)
  */
