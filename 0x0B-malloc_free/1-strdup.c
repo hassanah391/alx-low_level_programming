@@ -27,7 +27,7 @@ char *_strdup(char *str)
 	/* find the length of original string "str" */
 	length = _strlen_recursion(str);
 	/* allocate space for the new array "duplicated" */
-	duplicated = malloc(length * sizeof(char));
+	duplicated = malloc(++length * sizeof(char));
 
 	/* returns 1 if malloc failed */
 	if (duplicated == NULL)
