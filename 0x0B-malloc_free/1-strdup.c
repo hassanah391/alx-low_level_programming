@@ -15,14 +15,19 @@
 char *_strdup(char *str)
 {
 	int i;
-	/* find the length of original string "str" */
-	int length = _strlen_recursion(str);
+	int length;
+	char *duplicated;
 
-	/* allocate space for the new array "duplicated" */
-	char *duplicated = malloc(length * sizeof(char));
-
-	if (str == NULL) /* return NULL if str is empty */
+	/* returns NULL if "str" is empty */
+	if (str == NULL)
+	{
 		return (NULL);
+	}
+
+	/* find the length of original string "str" */
+	length = _strlen_recursion(str);
+	/* allocate space for the new array "duplicated" */
+	duplicated = malloc(length * sizeof(char));
 
 	/* returns 1 if malloc failed */
 	if (duplicated == NULL)
@@ -30,8 +35,6 @@ char *_strdup(char *str)
 		fprintf(stderr, "Not enough memory left!\n");
 		return (NULL);
 	}
-
-
 
 	/* copy the content of "str" to "dupliacted" */
 	for (i = 0; i < length; i++)
