@@ -18,11 +18,11 @@ char *str_concat(char *s1, char *s2)
 
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
-	len3 = len1 + len2;
-
-	len3++;
-
+	len3 = len1 + len2 + 1;
 	s3 = malloc(len3 * sizeof(char));
+	if (s3 == NULL)
+		return (NULL);
+
 	if (len3 - 1 == 0)
 		return (s3);
 
