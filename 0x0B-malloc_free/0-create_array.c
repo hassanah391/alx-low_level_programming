@@ -26,14 +26,11 @@ char *create_array(unsigned int size, char c)
 	if (arr == NULL)
 	{
 		fprintf(stderr, "Not enough memory left!\n");
-		exit(1);
+		return (NULL);
 	}
 	/* initialize the array with a specific char c */
 	while (i < size)
 		arr[i++] = c;
 
 	return (arr);
-
-	/* deallocate the space of the array */
-	free(arr);
 }
