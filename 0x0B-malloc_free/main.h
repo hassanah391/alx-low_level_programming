@@ -1,6 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+int _strlen_imple(char *s, int n);
+int _strlen_recursion(char *s);
 int _putchar(char c);
 void _putstring(char *str);
 int _putint(int n);
