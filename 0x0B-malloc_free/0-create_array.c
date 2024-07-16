@@ -25,7 +25,7 @@ char *create_array(unsigned int size, char c)
 	/* returns 1 if malloc failed */
 	if (arr == NULL)
 	{
-		_putstring("Not enough memory left!\n");
+		fprintf(stderr, "Not enough memory left!\n");
 		exit(1);
 	}
 	/* initialize the array with a specific char c */
