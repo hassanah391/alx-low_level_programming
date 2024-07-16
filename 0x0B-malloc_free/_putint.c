@@ -1,0 +1,60 @@
+#include "main.h"
+#include <unistd.h>
+
+void _itoa(int n, char *str)
+{
+	int i = 0;
+	int is_negative = 0;
+	int w = 0;
+
+	if (n == 0)
+	{
+		str[i++] = '0';
+		str[i] = '\0';
+	}
+
+	if (n < 0)
+	{
+		is_negative = 1;
+		n = n * -1;
+	}
+
+	while (n != 0)
+	{
+		str[i++] = (n % 10) + '0';
+		n /= 10;
+	}
+
+	if (is_negative == 1)
+		str[i++] = '-';
+
+	str[i] = '\0';
+	i--;
+
+	while (w < i)
+	{
+		char temp = str[i];
+
+		str[i] = str[w];
+		str[w] = temp;
+		i--;
+		w++;
+	}
+}
+
+int _putint(int n)
+{
+	char buffer[12];
+	char *ptr = buffer;
+	int length = 0;
+
+	_itoa(n, buffer);
+
+	while (*ptr != '\0')
+	{
+		length++;
+		ptr++;
+	}
+
+	return (write(1, buffer, length));
+}
