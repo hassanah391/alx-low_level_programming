@@ -20,11 +20,11 @@ char *str_concat(char *s1, char *s2)
 	len2 = _strlen(s2);
 	len3 = len1 + len2;
 
-	if (len3 == 0)
-		return (NULL);
 	len3++;
 
 	s3 = malloc(len3 * sizeof(char));
+	if (len3 - 1 == 0)
+		return (s3);
 
 	if (len1 > 0 && len2 == 0)
 	{
