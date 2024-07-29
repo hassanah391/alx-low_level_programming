@@ -1,9 +1,16 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/**
+ * main - Prints the name of the current file
+ *
+ *
+ * return: always 0.
+ */
+
 int main(void)
 {
 	printf("%s\n", __FILE__);
 
-	retrun (0);
+	return (0);
 }
