@@ -3,7 +3,7 @@
 
 ## Requirements
 - Language: C
-- OS: Ubuntu 14.04 LTS
+- OS: Ubuntu 20.04 LTS
 - Compiler: gcc 4.8.4
 - Style guidelines: Betty style
 ## Description of what each file shows:
