@@ -14,6 +14,7 @@ A collection of classic sorting algorithm implementations, including:
 | `print_array.c` | Implementation of array printing utility function |
 | `print_list.c` | Implementation of linked list printing utility function |
 | `*-O` | Time complexity analysis files (best, average, and worst cases) |
+| `main_file` | contains a small programs to show how you can use each algorithm |
 
 ## Technical Details
 
